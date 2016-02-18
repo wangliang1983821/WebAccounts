@@ -1,0 +1,59 @@
+﻿
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/base.css" rel="stylesheet" />
+</head>
+<body style="min-height:800px; height: auto">
+    
+
+
+    <div class="container-fluid">
+
+        @Html.Partial("Head")
+
+
+        <div class="row" style="margin-top:70px">
+
+            @Html.Partial("SiteMap")
+
+            @RenderBody()
+        </div>
+
+
+    </div>
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".dropdownMenu").dropdown();
+            $(".nav-left-dropdown>a").click(function () {
+
+
+                if ($(this).attr("d") != 1 && $(this).attr("d") != undefined) {
+                    $(this).removeClass("nav-left-dropdown-a");
+                    $this = $(this);
+                    $(this).next("ul").slideUp(300, function () { $this.removeClass("nav-left-bottrom-border"); $this.removeClass("nav-left-dropdown-ul") });
+
+                    $(this).attr("d", "1");
+
+                } else {
+                    $(this).addClass("nav-left-dropdown-a");
+                    $(this).addClass("nav-left-bottrom-border");
+                    $(this).next("ul").addClass("nav-left-dropdown-ul").slideDown(300);
+                    $(this).attr("d", "2");
+
+                }
+
+
+            })
+        });
+
+    </script>
+</body>
+</html>

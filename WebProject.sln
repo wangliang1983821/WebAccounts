@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accounts", "Accounts\Accounts.csproj", "{04BEC2DE-1D1B-41B6-8543-4626B3857E48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{0D4EFB24-E527-4ACF-9382-3C0966F9C79B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administration", "Administration\Administration.csproj", "{7A3814FD-5D2D-43C2-83DE-7BA469C10D51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04BEC2DE-1D1B-41B6-8543-4626B3857E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BEC2DE-1D1B-41B6-8543-4626B3857E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BEC2DE-1D1B-41B6-8543-4626B3857E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BEC2DE-1D1B-41B6-8543-4626B3857E48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D4EFB24-E527-4ACF-9382-3C0966F9C79B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4EFB24-E527-4ACF-9382-3C0966F9C79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4EFB24-E527-4ACF-9382-3C0966F9C79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4EFB24-E527-4ACF-9382-3C0966F9C79B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A3814FD-5D2D-43C2-83DE-7BA469C10D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A3814FD-5D2D-43C2-83DE-7BA469C10D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3814FD-5D2D-43C2-83DE-7BA469C10D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A3814FD-5D2D-43C2-83DE-7BA469C10D51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
