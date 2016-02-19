@@ -1,0 +1,4 @@
+E:\Git\WebAccounts\Model\bin\Debug\Model.dll
+E:\Git\WebAccounts\Model\bin\Debug\Model.pdb
+E:\Git\WebAccounts\Model\obj\Debug\Model.dll
+E:\Git\WebAccounts\Model\obj\Debug\Model.pdb

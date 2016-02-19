@@ -1,0 +1,169 @@
+﻿@{
+    ViewBag.Title = "UserManager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model  List<Model.AccountsUsers>
+<div class="main-right  col-md-10 col-md-offset-2">
+
+
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                条件查找
+            </div>
+            <div class="panel-body">
+
+
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="用户姓名" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+
+                </div>
+
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-info btn-lg" onclick="ShowDialog('myModal', '@Url.Action("Create", "UserManage")','content_body')">
+                        添加
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="panel panel-default ">
+            <div class="panel-heading">
+                用户列表
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered tb-hover">
+                    <thead>
+                        <tr>
+                            <td>序号</td>
+                            <td>名称</td>
+                            <td>年龄</td>
+                            <td>性别</td>
+                            <td>住址</td>
+                            <td class="text-center">操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            foreach (var u in Model)
+                            {
+                                <tr>
+                                    <td>@u.UserID</td>
+                                    <td>@u.UserName</td>
+                                    <td>@u.TrueName</td>
+                                    <td>@u.Phone</td>
+                                    <td>@u.Email</td>
+                                    <td class=" text-center">
+                                        <button type="button" class="btn btn-info" onclick="ShowDialog('myModal', '','content_body')">
+                                            修改
+                                        </button>&nbsp;&nbsp;<button type="button" class="btn btn-warning">删除</button>
+                                    </td>
+                                </tr>
+                            }
+
+
+                        }
+
+                    </tbody>
+                </table>
+                @Html.Partial("page")
+                @*<ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>*@
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    .modal {
+        width: 100%;
+        position: fixed;
+        text-align: center;
+        margin: 0px auto;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        z-index: 1050;
+    }
+
+    .modal_wrapper {
+        display: table;
+        overflow: auto;
+        overflow-y: scroll;
+        height: 100%;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .modal-dialog {
+        margin-top: 0px;
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0px 20px;
+    }
+</style>
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal_wrapper">
+        <div class="modal-dialog" style="width:1000px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        模态框（Modal）标题
+                    </h4>
+                </div>
+                <div class="modal-body" id="content_body">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuemax="100" style="width: 0%;">
+                        </div>
+                    </div>
+                   
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" onclick="modelSub('myModal', 'content_body')" class="btn btn-primary">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</div>

@@ -7,3 +7,7 @@ E:\资料\WebProject\Accounts\obj\Debug\LTP.Accounts.dll
 E:\资料\WebProject\Accounts\bin\Debug\LTP.Accounts.dll
 E:\资料\WebProject\Accounts\bin\Debug\LTP.Accounts.pdb
 E:\资料\WebProject\Accounts\obj\Debug\LTP.Accounts.pdb
+E:\Git\WebAccounts\Accounts\bin\Debug\LTP.Accounts.dll
+E:\Git\WebAccounts\Accounts\bin\Debug\LTP.Accounts.pdb
+E:\Git\WebAccounts\Accounts\obj\Debug\LTP.Accounts.dll
+E:\Git\WebAccounts\Accounts\obj\Debug\LTP.Accounts.pdb

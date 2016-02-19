@@ -7,6 +7,7 @@
     <title></title>
     <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/css/base.css" rel="stylesheet" />
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>  
 </head>
 <body style="min-height:800px; height: auto">
     
@@ -27,8 +28,10 @@
 
     </div>
 
-    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+  
     <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/jquery.page.js"></script>
+
     <script>
         $(document).ready(function () {
             $(".dropdownMenu").dropdown();
@@ -54,6 +57,14 @@
             })
         });
 
+        function ShowDialog(id, url,contentid) {
+         
+            $('#' + id).modal('show');
+           
+            if (url) {
+                $("#" + contentid).load(url);
+            }
+        }
     </script>
 </body>
 </html>
